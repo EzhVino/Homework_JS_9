@@ -102,7 +102,7 @@
 
         inputs.forEach(element => {
             element.addEventListener('change', function (e) {
-                !e.target.value ? e.target.classList.add('error') : e.target.classList.remove('error');
+                e.target.classList.toggle('error', !e.target.value)
             });
         });
 
